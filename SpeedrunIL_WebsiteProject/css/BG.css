@@ -1,0 +1,7 @@
+﻿body , html{
+    background-image:url(../pics/marioBG.jpg);
+    height:100%;
+    background-position:center;
+    background-repeat:repeat;
+    background-size:cover;
+}

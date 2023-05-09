@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.Master.cs" Inherits="SpeedrunIL_WebsiteProject.aspx.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Speedrun IL</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="css/Main.css" rel="stylesheet"/>
+</head>
+<body>  
+    <div>
+        <table class ="masterTable">
+            <tr>
+                <td style="width:10%">
+                    <div style="display:flex; justify-content:flex-start; width:55%">
+                        <a href="MainPage.aspx">
+                            <img src="../pics/marioLOGO.png" class="logo"/>
+                        </a>
+                    </div>
+                </td>
+                <td style="width:10%">
+                    <div style="display:flex; justify-content:flex-start">
+                        <a href="Profile.aspx?username=<%=Session["name"] %>">
+                            <h3 class="heading">Hello <%=Session["name"] %></h3>
+                        </a>
+                    </div>
+                </td>
+                <td style="width:80%"></td>
+                <td class="masterButtons">
+                    <div style="display:flex; justify-content:flex-end">
+                        <a href="RegisterPage.aspx" class="button">
+                            <h2>Register</h2>
+                        </a>
+                    </div>
+                </td>
+                <td class="masterButtons">
+                    <div style="display:flex; justify-content:flex-end">
+                        <a href="Login.aspx" class="button">Login</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    
+    <h1></h1>
+</body>
+</html>
